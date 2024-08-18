@@ -1,0 +1,49 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.2'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'kr'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+	all {
+		/* remove-spring-boot-starter-logging */
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-web-services'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '3.3.2'
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml
+	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.17.2'
+	// https://mvnrepository.com/artifact/nz.net.ultraq.thymeleaf/thymeleaf-layout-dialect
+	implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '3.3.0'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

@@ -1,0 +1,40 @@
+spring:
+  messages:
+    basename: message/messages
+    encoding: UTF-8
+    fallbackToSystemLocale: false
+    alwaysUseMessageFormat: true
+  profiles:
+    active: local
+  thymeleaf:
+    prefix: /WEB-INF/templates/views/page/
+    suffix: .html
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+logging:
+  config: classpath:log4j2.yml
+server:
+  title: https://tlswlsdntks.tistory.com/
+  tomcat:
+    max-http-form-post-size: 20MB
+
+--- #local
+spring:
+  config:
+    activate:
+      on-profile: local
+  web:
+    resources:
+      static-locations: file:C:/wikidocs/local
+  session:
+    timeout: 3600
+    store-type: none
+  devtools:
+    livereload:
+      enabled: true
+server:
+  version: '@local version@'
+  port: 8080

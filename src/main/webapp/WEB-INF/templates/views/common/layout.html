@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!-- 공통 헤드-->
+<th:block th:replace="../common/fragment/head :: headFragment"></th:block>
+
+<body id="page-top">
+    <span th:text="${path?.basePath}"></span>
+    <span th:text="${path?.cssPath}"></span>
+    <span th:text="${path?.imgPath}"></span>
+    <span th:text="${path?.jsPath}"></span>
+    <span th:text="${path?.scssPath}"></span>
+    <span th:text="${path?.venderPath}"></span>
+    <div id="wrapper">
+        <!-- 사이드바-->
+        <th:block th:replace="../common/fragment/sidebar :: sidebarFragment"></th:block>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- 상단바-->
+                <th:block th:replace="../common/fragment/top :: topbarFragment"></th:block>
+
+                <!-- 본문-->
+                <th:block layout:fragment="content"></th:block>
+            </div>
+
+            <!-- 공통 하단-->
+            <th:block th:replace="../common/fragment/footer :: footerFragment"></th:block>
+        </div>
+    </div>
+
+    <!-- 공통 스크립트-->
+    <th:block th:replace="../common/fragment/script :: scriptFragment"></th:block>
+
+    <!-- 스크롤 버튼 -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- 로그아웃 모달 -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="/demo/login">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
