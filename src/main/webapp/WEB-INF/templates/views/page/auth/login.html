@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<!-- 공통 헤드-->
+<th:block th:replace="../common/fragment/head :: headFragment"></th:block>
+
+<body class="bg-gradient-light">
+
+<div class="container">
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">로그인</h1>
+                                </div>
+                                <form action="#" method="post" id="loginForm">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user"
+                                               id="loginId" name="loginId" aria-describedby="IdHelp"
+                                               placeholder="ID">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                               id="loginPw" name="loginPw" placeholder="PASSWORD">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="custom-control-input" id="remember">
+                                            <label class="custom-control-label" for="remember">Remember Me</label>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary btn-user btn-block" id="btnLogin">
+                                        Login
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 공통 스크립트-->
+<th:block th:replace="../common/fragment/script :: scriptFragment"></th:block>
+
+<script type="text/javascript">
+
+    /**
+     * 초기함수
+     */
+    initFunction = function (param) {
+        // 이벤트처리
+        eventFunction(param);
+    }
+
+    /**
+     * 이벤트처리
+     */
+    eventFunction = function (param) {
+        // 로그인 기억하기
+        let saveId = custom.storage.local.get("saveId");
+        if (saveId) {
+            $("#loginId").val(saveId);
+            $("#remember").prop("checked", true);
+        } else {
+            $("#loginId").val("");
+            $("#remember").prop("checked", false);
+        }
+
+        // 유효성
+        $("#loginForm").validate({
+            rules: {
+                loginId: {
+                    required: true
+                },
+                loginPw: {
+                    required: true
+                }
+            },
+            messages: {
+                loginId: {
+                    required: "로그인ID를 입력해주세요."
+                },
+                loginPw: {
+                    required: "패스워드를 입력해주세요."
+                }
+            }
+        });
+
+        //로그인
+        $("#btnLogin").unbind().bind("click", function () {
+            let valid = $("#loginForm").valid();
+            if (valid) {
+                var p = $("#loginForm").getFormData();
+                // custom.util.ajax({
+                //     url: "/auth/login/process",
+                //     param: p,
+                //     callback: function (result) {
+                //         if (result.rstCd == 0) {
+                //             if ($("#remember").prop("checked")) {
+                //                 custom.storage.local.set("saveId", p.loginId);
+                //             } else {
+                //                 custom.storage.local.remove("saveId");
+                //             }
+                //             custom.util.movePage("/main");
+                //         } else {
+                //             $.alert(result.rstMsg);
+                //             return;
+                //         }
+                //     }
+                // });
+            }
+        });
+
+        // Enter
+        custom.util.enter({
+            target: ["loginId", "loginPw"],
+            trigger: "btnLogin"
+        })
+    }
+</script>
+
+</body>
+
+</html>

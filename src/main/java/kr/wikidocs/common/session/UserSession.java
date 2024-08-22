@@ -20,7 +20,6 @@ public class UserSession{
 	 * @param isNew true인경우 세션을 새로 생성한다.
 	 */
 	public UserSession(boolean isNew){
-
 		try{
 			if(isNew){
 				this.session = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession(true);

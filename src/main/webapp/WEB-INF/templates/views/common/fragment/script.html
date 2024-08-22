@@ -1,21 +1,96 @@
 <!DOCTYPE html>
-<html lagn="en"
+<html lang="en"
       xmlns:th="http://www.thymeleaf.org">
 
 <!-- Script -->
 <th:block th:fragment="scriptFragment">
-    <!-- Bootstrap core JavaScript-->
-    <script src="resources/vendor/jquery/jquery.min.js"></script>
-    <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css"
+          th:href="@{${pluginPath} + '/icheck-bootstrap/icheck-bootstrap.min.css'}">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css"
+          th:href="@{${pluginPath} + '/overlayScrollbars/css/OverlayScrollbars.min.css'}">
+    <!-- jquery-confirm -->
+    <link rel="stylesheet"  href="resources/plugin/jquery-confirm/jquery-confirm.min.css"
+          th:href="@{${pluginPath} + '/jquery-confirm/jquery-confirm.min.css'}">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="resources/plugin/daterangepicker/daterangepicker.css"
+          th:href="@{${pluginPath} + '/daterangepicker/daterangepicker.css'}">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+          th:href="@{${pluginPath} + '/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'}">
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="resources/css/sb-admin-2.min.css"
+          th:href="@{${cssPath} + '/sb-admin-2.min.css'}">
+    <!-- Font Awesome Icons-->
+    <link rel="stylesheet" href="resources/vendor/fontawesome-free/css/all.min.css"
+          th:href="@{${vendorPath} + '/fontawesome-free/css/all.min.css'}">
+    <!-- toastr.min.css -->
+    <link rel="stylesheet" href="resources/plugin/toastr/toastr.min.css"
+          th:href="@{${pluginPath} + '/toastr/toastr.min.css'}">
+
+
+    <!-- jquery -->
+    <script src="resources/vendor/jquery/jquery.min.js"
+            th:src="@{${vendorPath} + '/jquery/jquery.min.js'}"></script>
+    <script src="resources/plugin/jquery-ui/jquery-ui.min.js"
+            th:src="@{${pluginPath} + '/jquery-ui/jquery-ui.min.js'}"></script>
+    <script src="resources/vendor/jquery-easing/jquery.easing.min.js"
+            th:src="@{${vendorPath} + '/jquery-easing/jquery.easing.min.js'}"></script>
+    <script src="resources/plugin/jquery/jquery.form.min.js"
+            th:src="@{${pluginPath} + '/jquery/jquery.form.min.js'}"></script>
+    <script src="resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js"
+            th:src="@{${pluginPath} + '/overlayScrollbars/js/jquery.overlayScrollbars.min.js'}"></script>
+    <script src="resources/plugin/jquery-confirm/jquery-confirm.min.js"
+            th:src="@{${pluginPath} + '/jquery-confirm/jquery-confirm.min.js'}"></script>
+    <script src="resources/plugin/jquery-validation/jquery.validate.min.js"
+            th:src="@{${pluginPath} + '/jquery-validation/jquery.validate.min.js'}"></script>
+    <script src="resources/plugin/jquery-validation/additional-methods.min.js"
+            th:src="@{${pluginPath} + '/jquery-validation/additional-methods.min.js'}"></script>
+    <!-- bootstrap.bundle.min -->
+    <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"
+            th:src="@{${vendorPath} + '/bootstrap/js/bootstrap.bundle.min.js'}"></script>
+    <!-- Axios -->
+    <script src="resources/plugin/axios/axios.min.js"
+            th:src="@{${pluginPath} + '/axios/axios.min.js'}"></script>
+    <!-- InputMask -->
+    <script src="resources/plugin/moment/moment.min.js"
+            th:src="@{${pluginPath} + '/moment/moment.min.js'}"></script>
+    <script src="resources/plugin/moment/locale/ko.js"
+            th:src="@{${pluginPath} + '/moment/locale/ko.js'}"></script>
+    <script src="resources/plugin/inputmask/jquery.inputmask.min.js"
+            th:src="@{${pluginPath} + '/inputmask/jquery.inputmask.min.js'}"></script>
+    <!-- date-range-picker -->
+    <script src="resources/plugin/daterangepicker/daterangepicker.js"
+            th:src="@{${pluginPath} + '/daterangepicker/daterangepicker.js'}"></script>
+    <!-- AG Grid -->
+    <script src="resources/plugin/ag-grid/js/ag-grid.js"
+            th:src="@{${pluginPath} + '/ag-grid/js/ag-grid.js'}"></script>
+    <!-- Common -->
+    <script src="resources/js/custom/custom.jquery.js"
+            th:src="@{${jsPath} + '/custom/custom.jquery.js'}"></script>
+    <script src="resources/js/custom/custom.common.js"
+            th:src="@{${jsPath} + '/custom/custom.common.js'}"></script>
+    <script src="resources/js/custom/custom.storage.js"
+            th:src="@{${jsPath} + '/custom/custom.storage.js'}"></script>
+    <script src="resources/js/custom/custom.util.js"
+            th:src="@{${jsPath} + '/custom/custom.util.js'}"></script>
+    <script src="resources/js/custom/custom.grid.js"
+            th:src="@{${jsPath} + '/custom/custom.grid.js'}"></script>
     <!-- Custom scripts for all pages-->
-    <script src="resources/js/sb-admin-2.min.js"></script>
-    <!-- Page level plugins -->
-    <script src="resources/vendor/chart.js/Chart.min.js"></script>
-    <!-- Page level custom scripts -->
-    <script src="resources/js/demo/chart-area-demo.js"></script>
-    <script src="resources/js/demo/chart-pie-demo.js"></script>
+    <script src="resources/js/sb-admin-2.min.js"
+            th:src="@{${jsPath} + '/sb-admin-2.min.js'}"></script>
+    <!-- toastr.min.js -->
+    <script src="resources/js/adminlte.js"
+            th:src="@{${jsPath} + '/adminlte.js'}"></script>
+    <script src="resources/plugin/toastr/toastr.min.js"
+            th:src="@{${pluginPath} + '/toastr/toastr.min.js'}"></script>
+
 </th:block>
 
 </html>

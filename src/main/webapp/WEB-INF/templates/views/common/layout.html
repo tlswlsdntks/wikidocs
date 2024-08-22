@@ -7,12 +7,6 @@
 <th:block th:replace="../common/fragment/head :: headFragment"></th:block>
 
 <body id="page-top">
-    <span th:text="${path?.basePath}"></span>
-    <span th:text="${path?.cssPath}"></span>
-    <span th:text="${path?.imgPath}"></span>
-    <span th:text="${path?.jsPath}"></span>
-    <span th:text="${path?.scssPath}"></span>
-    <span th:text="${path?.venderPath}"></span>
     <div id="wrapper">
         <!-- 사이드바-->
         <th:block th:replace="../common/fragment/sidebar :: sidebarFragment"></th:block>
@@ -53,7 +47,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="/demo/login">Logout</a>
+                    <a class="btn btn-primary" href="/auth/login">Logout</a>
                 </div>
             </div>
         </div>

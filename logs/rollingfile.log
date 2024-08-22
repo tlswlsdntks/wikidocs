@@ -1,3 +1,13 @@
-[DEBUG] 2024-08-18 22:46:02.819 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/favicon.ico", parameters={}
-[DEBUG] 2024-08-18 22:46:02.823 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
-[DEBUG] 2024-08-18 22:46:02.824 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-08-22 17:33:14.608 [SpringApplicationShutdownHook][ApplicationAvailabilityBean.java] ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+[DEBUG] 2024-08-22 17:33:14.613 [SpringApplicationShutdownHook][AbstractApplicationContext.java] AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d11f042, started on Thu Aug 22 15:57:04 KST 2024
+[DEBUG] 2024-08-22 17:33:14.616 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+[DEBUG] 2024-08-22 17:33:14.617 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'applicationTaskExecutor' completed its stop procedure
+[DEBUG] 2024-08-22 17:33:14.617 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147482623
+[DEBUG] 2024-08-22 17:33:14.618 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'webServerGracefulShutdown' completed its stop procedure
+[DEBUG] 2024-08-22 17:33:14.618 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147481599
+[DEBUG] 2024-08-22 17:33:14.695 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'webServerStartStop' completed its stop procedure
+[DEBUG] 2024-08-22 17:33:14.695 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase -2147483647
+[DEBUG] 2024-08-22 17:33:14.695 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'springBootLoggingLifecycle' completed its stop procedure
+[DEBUG] 2024-08-22 17:33:14.696 [SpringApplicationShutdownHook][ExecutorConfigurationSupport.java] ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[DEBUG] 2024-08-22 17:33:14.696 [SpringApplicationShutdownHook][MBeanExporter.java] AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[DEBUG] 2024-08-22 17:33:14.696 [SpringApplicationShutdownHook][ExecutorConfigurationSupport.java] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

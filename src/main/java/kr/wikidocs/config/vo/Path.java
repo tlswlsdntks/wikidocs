@@ -5,16 +5,18 @@ public class Path {
     private final String cssPath;
     private final String imgPath;
     private final String jsPath;
+    private final String pluginPath;
     private final String scssPath;
-    private final String venderPath;
+    private final String vendorPath;
 
     public Path(String basePath) {
         this.basePath = basePath;
-        this.cssPath = basePath + "/css";
-        this.imgPath = basePath + "/img";
-        this.jsPath = basePath + "/js";
-        this.scssPath = basePath + "/scss";
-        this.venderPath = basePath + "/vender";
+        this.cssPath = basePath + "/resources/css";
+        this.imgPath = basePath + "/resources/img";
+        this.jsPath = basePath + "/resources/js";
+        this.pluginPath = basePath + "/resources/plugin";
+        this.scssPath = basePath + "/resources/scss";
+        this.vendorPath = basePath + "/resources/vendor";
     }
 
     public String getBasePath() {
@@ -33,23 +35,16 @@ public class Path {
         return jsPath;
     }
 
+    public String getPluginPath() {
+        return pluginPath;
+    }
+
     public String getScssPath() {
         return scssPath;
     }
 
-    public String getVenderPath() {
-        return venderPath;
+    public String getVendorPath() {
+        return vendorPath;
     }
 
-    @Override
-    public String toString() {
-        return "Path{" +
-                "basePath='" + basePath + '\'' +
-                ", cssPath='" + cssPath + '\'' +
-                ", imgPath='" + imgPath + '\'' +
-                ", jsPath='" + jsPath + '\'' +
-                ", scssPath='" + scssPath + '\'' +
-                ", venderPath='" + venderPath + '\'' +
-                '}';
-    }
 }
