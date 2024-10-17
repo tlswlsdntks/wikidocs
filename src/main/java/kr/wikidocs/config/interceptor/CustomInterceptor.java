@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import kr.wikidocs.common.annotation.NoSession;
 import kr.wikidocs.common.session.UserSession;
+import kr.wikidocs.common.util.PathUtils;
 import kr.wikidocs.common.util.XssUtils;
 import kr.wikidocs.config.vo.Path;
 import lombok.extern.slf4j.Slf4j;
@@ -133,8 +134,10 @@ public class CustomInterceptor implements HandlerInterceptor {
 
                         modelAndView.addObject("result", jsonObject);
 
-                        //공통 경로 추가
-                        addCommonPath(req, modelAndView);
+                        /**
+                         * 공통 경로 추가
+                         */
+                        PathUtils.addCommonPath(req, modelAndView);
                     }
                 }
                 log.debug("@@@ modelAndView: {}", modelAndView);
@@ -146,17 +149,4 @@ public class CustomInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest req, HttpServletResponse res, Object handler, Exception ex) {
     }
 
-    /**
-     * 공통 경로 추가
-     */
-    private void addCommonPath(HttpServletRequest req, ModelAndView modelAndView) {
-        Path path = new Path(req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort());
-        modelAndView.addObject("basePath", path.getBasePath());
-        modelAndView.addObject("cssPath", path.getCssPath());
-        modelAndView.addObject("imgPath", path.getImgPath());
-        modelAndView.addObject("jsPath", path.getJsPath());
-        modelAndView.addObject("pluginPath", path.getPluginPath());
-        modelAndView.addObject("scssPath", path.getScssPath());
-        modelAndView.addObject("vendorPath", path.getVendorPath());
-    }
 }

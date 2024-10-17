@@ -1,13 +1,913 @@
-[DEBUG] 2024-08-22 17:33:14.608 [SpringApplicationShutdownHook][ApplicationAvailabilityBean.java] ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
-[DEBUG] 2024-08-22 17:33:14.613 [SpringApplicationShutdownHook][AbstractApplicationContext.java] AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d11f042, started on Thu Aug 22 15:57:04 KST 2024
-[DEBUG] 2024-08-22 17:33:14.616 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147483647
-[DEBUG] 2024-08-22 17:33:14.617 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'applicationTaskExecutor' completed its stop procedure
-[DEBUG] 2024-08-22 17:33:14.617 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147482623
-[DEBUG] 2024-08-22 17:33:14.618 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'webServerGracefulShutdown' completed its stop procedure
-[DEBUG] 2024-08-22 17:33:14.618 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147481599
-[DEBUG] 2024-08-22 17:33:14.695 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'webServerStartStop' completed its stop procedure
-[DEBUG] 2024-08-22 17:33:14.695 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase -2147483647
-[DEBUG] 2024-08-22 17:33:14.695 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'springBootLoggingLifecycle' completed its stop procedure
-[DEBUG] 2024-08-22 17:33:14.696 [SpringApplicationShutdownHook][ExecutorConfigurationSupport.java] ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
-[DEBUG] 2024-08-22 17:33:14.696 [SpringApplicationShutdownHook][MBeanExporter.java] AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-[DEBUG] 2024-08-22 17:33:14.696 [SpringApplicationShutdownHook][ExecutorConfigurationSupport.java] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[DEBUG] 2024-10-17 20:59:00.146 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/auth/login", parameters={}
+[DEBUG] 2024-10-17 20:59:00.153 [http-nio-8080-exec-10][AbstractHandlerMapping.java] RequestMappingHandlerMapping - Mapped to kr.wikidocs.mvc.auth.controller.AuthController#login(HttpServletRequest, HttpServletResponse, Model, HashMap)
+[DEBUG] 2024-10-17 20:59:00.153 [http-nio-8080-exec-10][AuthController.java] AuthController - call => /auth/login
+[DEBUG] 2024-10-17 20:59:00.154 [http-nio-8080-exec-10][ContentNegotiatingViewResolver.java] ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[WARN ] 2024-10-17 20:59:00.156 [http-nio-8080-exec-10][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/head :: headFragment" found in template /auth/login, line 6, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/head :: headFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[WARN ] 2024-10-17 20:59:00.157 [http-nio-8080-exec-10][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/script :: scriptFragment" found in template /auth/login, line 60, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/script :: scriptFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[DEBUG] 2024-10-17 20:59:00.158 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.173 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:00.173 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.174 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.178 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:00.178 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:00.178 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.178 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.179 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.css", parameters={}
+[DEBUG] 2024-10-17 20:59:00.179 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.179 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.179 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.180 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.180 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:00.180 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.180 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/css/sb-admin-2.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:00.180 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.181 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.181 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/fontawesome-free/css/all.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:00.182 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.183 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.183 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.183 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:00.184 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.184 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery/jquery.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.184 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-ui/jquery-ui.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.184 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.184 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.184 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery-easing/jquery.easing.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.184 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.184 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery/jquery.form.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.185 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.185 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.185 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.185 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.185 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.186 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.186 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.185 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.187 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.187 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.187 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/jquery.validate.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.188 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.189 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.189 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/additional-methods.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.189 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.189 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.189 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/axios/axios.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.189 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.189 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.189 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.190 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/moment.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.191 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/locale/ko.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.191 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.191 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.191 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.192 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.192 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.192 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.192 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.192 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.194 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/inputmask/jquery.inputmask.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.194 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.jquery.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/ag-grid/js/ag-grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.storage.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.common.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.196 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.196 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.util.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.196 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.196 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.195 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.197 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.197 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.197 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.197 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/sb-admin-2.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.198 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.198 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.198 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.198 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/adminlte.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.199 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.200 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.200 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.200 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:00.200 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:00.202 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.202 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.203 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:00.228 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.070 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/auth/forgot-password", parameters={}
+[DEBUG] 2024-10-17 20:59:01.070 [http-nio-8080-exec-3][AbstractHandlerMapping.java] RequestMappingHandlerMapping - Mapped to kr.wikidocs.mvc.auth.controller.AuthController#login(HttpServletRequest, HttpServletResponse, Model, HashMap)
+[DEBUG] 2024-10-17 20:59:01.070 [http-nio-8080-exec-3][AuthController.java] AuthController - call => /auth/forgot-password
+[DEBUG] 2024-10-17 20:59:01.071 [http-nio-8080-exec-3][ContentNegotiatingViewResolver.java] ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[WARN ] 2024-10-17 20:59:01.071 [http-nio-8080-exec-3][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-3][/auth/forgot-password] Deprecated unwrapped fragment expression "../common/fragment/head :: headFragment" found in template /auth/forgot-password, line 6, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/head :: headFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[WARN ] 2024-10-17 20:59:01.072 [http-nio-8080-exec-3][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-3][/auth/forgot-password] Deprecated unwrapped fragment expression "../common/fragment/script :: scriptFragment" found in template /auth/forgot-password, line 50, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/script :: scriptFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[DEBUG] 2024-10-17 20:59:01.073 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.089 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.089 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.089 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.089 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.089 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/css/sb-admin-2.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.090 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.091 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.091 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.092 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/fontawesome-free/css/all.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.092 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.092 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.092 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery/jquery.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.092 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.092 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.092 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.093 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-ui/jquery-ui.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.093 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.093 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery-easing/jquery.easing.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.093 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.094 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.094 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.094 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.094 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.095 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.097 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery/jquery.form.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.098 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.098 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.099 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.099 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.099 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.099 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/jquery.validate.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.099 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.100 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/additional-methods.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.100 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.100 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.100 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.100 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.100 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/axios/axios.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.101 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.101 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.101 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/moment.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.101 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.102 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.102 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.102 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.102 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.102 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.102 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.103 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/locale/ko.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.103 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.103 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.103 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/inputmask/jquery.inputmask.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.103 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.103 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.104 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/ag-grid/js/ag-grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.104 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.jquery.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.104 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.common.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.104 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.104 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.104 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.104 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.105 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.105 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.105 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.105 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.105 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.storage.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.106 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.106 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.util.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.106 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.106 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.107 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.107 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/sb-admin-2.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.107 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.107 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.107 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/adminlte.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.108 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.108 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.108 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.110 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.113 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.114 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.115 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.118 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.131 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.858 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/auth/login", parameters={}
+[DEBUG] 2024-10-17 20:59:01.858 [http-nio-8080-exec-1][AbstractHandlerMapping.java] RequestMappingHandlerMapping - Mapped to kr.wikidocs.mvc.auth.controller.AuthController#login(HttpServletRequest, HttpServletResponse, Model, HashMap)
+[DEBUG] 2024-10-17 20:59:01.859 [http-nio-8080-exec-1][AuthController.java] AuthController - call => /auth/login
+[DEBUG] 2024-10-17 20:59:01.859 [http-nio-8080-exec-1][ContentNegotiatingViewResolver.java] ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[WARN ] 2024-10-17 20:59:01.860 [http-nio-8080-exec-1][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-1][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/head :: headFragment" found in template /auth/login, line 6, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/head :: headFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[WARN ] 2024-10-17 20:59:01.861 [http-nio-8080-exec-1][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-1][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/script :: scriptFragment" found in template /auth/login, line 60, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/script :: scriptFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[DEBUG] 2024-10-17 20:59:01.862 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.879 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.879 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.880 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.885 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.885 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.885 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.885 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.886 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.886 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.886 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.886 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.886 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.887 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.887 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.888 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.888 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/css/sb-admin-2.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.888 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.888 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/fontawesome-free/css/all.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.889 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.890 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.890 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery/jquery.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.890 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:01.890 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.891 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery-easing/jquery.easing.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.891 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-ui/jquery-ui.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.891 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.891 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.891 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.891 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.892 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery/jquery.form.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.892 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.892 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.892 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.893 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.894 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.894 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.894 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.894 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.894 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.895 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.895 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.896 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.896 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/jquery.validate.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.896 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.896 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/additional-methods.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.897 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.897 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.897 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.897 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/axios/axios.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.897 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.897 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.898 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/locale/ko.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.898 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/moment.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.898 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.898 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.898 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.899 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/inputmask/jquery.inputmask.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.899 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.898 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.899 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.899 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.900 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.900 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.900 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.900 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/ag-grid/js/ag-grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.901 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.jquery.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.901 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.902 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.common.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.901 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.902 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.904 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.904 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.storage.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.902 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.904 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.904 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.util.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.904 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.905 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.905 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.905 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.905 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/sb-admin-2.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.905 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.905 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.906 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.906 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.906 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.906 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.907 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/adminlte.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.907 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.907 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:01.908 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:01.909 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.909 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:01.938 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.709 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/auth/register", parameters={}
+[DEBUG] 2024-10-17 20:59:03.709 [http-nio-8080-exec-1][AbstractHandlerMapping.java] RequestMappingHandlerMapping - Mapped to kr.wikidocs.mvc.auth.controller.AuthController#login(HttpServletRequest, HttpServletResponse, Model, HashMap)
+[DEBUG] 2024-10-17 20:59:03.709 [http-nio-8080-exec-1][AuthController.java] AuthController - call => /auth/register
+[DEBUG] 2024-10-17 20:59:03.710 [http-nio-8080-exec-1][ContentNegotiatingViewResolver.java] ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[WARN ] 2024-10-17 20:59:03.712 [http-nio-8080-exec-1][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-1][/auth/register] Deprecated unwrapped fragment expression "../common/fragment/head :: headFragment" found in template /auth/register, line 6, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/head :: headFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[WARN ] 2024-10-17 20:59:03.713 [http-nio-8080-exec-1][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-1][/auth/register] Deprecated unwrapped fragment expression "../common/fragment/script :: scriptFragment" found in template /auth/register, line 63, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/script :: scriptFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[DEBUG] 2024-10-17 20:59:03.714 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.735 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:03.735 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.735 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:03.735 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.736 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:03.736 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.736 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.737 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.737 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.737 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.css", parameters={}
+[DEBUG] 2024-10-17 20:59:03.737 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.738 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:03.738 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.738 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/css/sb-admin-2.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:03.738 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.738 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.739 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/fontawesome-free/css/all.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery/jquery.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-ui/jquery-ui.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery-easing/jquery.easing.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.741 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery/jquery.form.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.742 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.742 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.742 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.742 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.742 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.742 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.743 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/jquery.validate.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/additional-methods.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/axios/axios.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.744 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.745 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.745 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.745 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.746 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.746 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.746 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/moment.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/locale/ko.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/inputmask/jquery.inputmask.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/ag-grid/js/ag-grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.747 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.jquery.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.749 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.749 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.749 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.750 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.750 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.751 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.751 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.common.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.751 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.storage.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.751 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.752 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.752 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.util.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.752 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.752 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.753 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.753 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.752 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/sb-admin-2.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.754 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.757 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.753 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.757 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/adminlte.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.759 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.757 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:03.757 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.759 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:03.760 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.761 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.763 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:03.780 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.963 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/auth/login", parameters={}
+[DEBUG] 2024-10-17 20:59:05.964 [http-nio-8080-exec-4][AbstractHandlerMapping.java] RequestMappingHandlerMapping - Mapped to kr.wikidocs.mvc.auth.controller.AuthController#login(HttpServletRequest, HttpServletResponse, Model, HashMap)
+[DEBUG] 2024-10-17 20:59:05.964 [http-nio-8080-exec-4][AuthController.java] AuthController - call => /auth/login
+[DEBUG] 2024-10-17 20:59:05.965 [http-nio-8080-exec-4][ContentNegotiatingViewResolver.java] ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[WARN ] 2024-10-17 20:59:05.966 [http-nio-8080-exec-4][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-4][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/head :: headFragment" found in template /auth/login, line 6, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/head :: headFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[WARN ] 2024-10-17 20:59:05.968 [http-nio-8080-exec-4][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-4][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/script :: scriptFragment" found in template /auth/login, line 60, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/script :: scriptFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[DEBUG] 2024-10-17 20:59:05.970 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.985 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:05.985 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:05.985 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.985 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.987 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.987 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.989 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:05.990 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.css", parameters={}
+[DEBUG] 2024-10-17 20:59:05.990 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.990 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.990 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:05.990 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.991 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/css/sb-admin-2.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:05.991 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.991 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/fontawesome-free/css/all.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:05.993 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.993 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:05.993 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.993 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.993 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.994 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.995 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.995 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery/jquery.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:05.996 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.996 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-ui/jquery-ui.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:05.996 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.996 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.996 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.996 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery-easing/jquery.easing.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:05.996 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.997 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery/jquery.form.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:05.997 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.997 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:05.997 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.997 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:05.997 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:05.998 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.999 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:05.999 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.000 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.000 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/jquery.validate.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.000 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.000 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.000 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/additional-methods.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.000 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.000 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.002 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.002 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.002 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/axios/axios.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.002 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/moment.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.002 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/locale/ko.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.002 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.003 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.003 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.003 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.004 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/inputmask/jquery.inputmask.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.004 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.005 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.007 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.007 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.007 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.008 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.010 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.010 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.jquery.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.010 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.011 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.011 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.common.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.011 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.007 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.010 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.011 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/ag-grid/js/ag-grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.011 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.storage.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.011 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.011 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.util.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.013 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.011 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.013 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.013 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.014 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.015 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.015 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/sb-admin-2.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.016 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.016 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.016 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/adminlte.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.016 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.016 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.017 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.018 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.018 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.021 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.018 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.021 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.051 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.821 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/auth/register", parameters={}
+[DEBUG] 2024-10-17 20:59:06.821 [http-nio-8080-exec-6][AbstractHandlerMapping.java] RequestMappingHandlerMapping - Mapped to kr.wikidocs.mvc.auth.controller.AuthController#login(HttpServletRequest, HttpServletResponse, Model, HashMap)
+[DEBUG] 2024-10-17 20:59:06.822 [http-nio-8080-exec-6][AuthController.java] AuthController - call => /auth/register
+[DEBUG] 2024-10-17 20:59:06.822 [http-nio-8080-exec-6][ContentNegotiatingViewResolver.java] ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[WARN ] 2024-10-17 20:59:06.823 [http-nio-8080-exec-6][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-6][/auth/register] Deprecated unwrapped fragment expression "../common/fragment/head :: headFragment" found in template /auth/register, line 6, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/head :: headFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[WARN ] 2024-10-17 20:59:06.824 [http-nio-8080-exec-6][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-6][/auth/register] Deprecated unwrapped fragment expression "../common/fragment/script :: scriptFragment" found in template /auth/register, line 63, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/script :: scriptFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[DEBUG] 2024-10-17 20:59:06.824 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.841 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:06.841 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.css", parameters={}
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/css/sb-admin-2.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.842 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.844 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.844 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.844 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.844 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.844 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.845 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.845 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/fontawesome-free/css/all.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:06.845 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:06.845 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.845 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.847 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.847 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery/jquery.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.848 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.848 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.848 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-ui/jquery-ui.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.848 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.849 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.849 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery-easing/jquery.easing.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.850 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.851 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.851 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery/jquery.form.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.851 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.851 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.852 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.853 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.853 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.853 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.854 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/jquery.validate.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.854 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.854 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/additional-methods.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.854 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.854 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.854 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.854 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.854 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/axios/axios.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.854 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.855 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.855 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.855 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.855 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.856 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.856 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/moment.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.856 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.856 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.856 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/locale/ko.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.856 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/inputmask/jquery.inputmask.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/ag-grid/js/ag-grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.jquery.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.857 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.859 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.common.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.859 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.859 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.storage.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.859 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.859 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.859 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.859 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.860 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.860 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.util.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.860 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.860 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.860 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.860 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.860 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/sb-admin-2.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.860 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.861 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/adminlte.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.861 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:06.861 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.861 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.861 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.861 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:06.861 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.862 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.862 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:06.891 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.118 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/auth/login", parameters={}
+[DEBUG] 2024-10-17 20:59:08.118 [http-nio-8080-exec-10][AbstractHandlerMapping.java] RequestMappingHandlerMapping - Mapped to kr.wikidocs.mvc.auth.controller.AuthController#login(HttpServletRequest, HttpServletResponse, Model, HashMap)
+[DEBUG] 2024-10-17 20:59:08.119 [http-nio-8080-exec-10][AuthController.java] AuthController - call => /auth/login
+[DEBUG] 2024-10-17 20:59:08.119 [http-nio-8080-exec-10][ContentNegotiatingViewResolver.java] ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[WARN ] 2024-10-17 20:59:08.120 [http-nio-8080-exec-10][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/head :: headFragment" found in template /auth/login, line 6, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/head :: headFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[WARN ] 2024-10-17 20:59:08.121 [http-nio-8080-exec-10][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/script :: scriptFragment" found in template /auth/login, line 60, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/script :: scriptFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[DEBUG] 2024-10-17 20:59:08.122 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.138 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.138 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.138 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.138 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.139 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.139 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.139 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.139 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.139 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.140 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/css/sb-admin-2.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.140 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.140 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.140 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.140 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.142 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.142 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.142 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/fontawesome-free/css/all.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.140 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.142 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.142 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.142 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.142 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery/jquery.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.143 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.143 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-ui/jquery-ui.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.143 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.143 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.144 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.144 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery-easing/jquery.easing.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.144 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.144 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.145 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.145 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.145 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.145 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery/jquery.form.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.146 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.147 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.148 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.148 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.149 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.149 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.149 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/jquery.validate.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.149 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.149 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/additional-methods.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.150 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.150 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.150 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.150 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.150 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.150 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/axios/axios.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.151 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/moment.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.151 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/locale/ko.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.151 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.151 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.152 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.151 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.152 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.152 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.153 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/inputmask/jquery.inputmask.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.153 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.153 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.153 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.153 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.153 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.153 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/ag-grid/js/ag-grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.153 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.153 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.154 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.jquery.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.154 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.154 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.154 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.common.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.154 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.154 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.156 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.storage.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.156 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.156 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.util.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.156 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.156 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.156 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.157 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.157 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/sb-admin-2.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.158 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.158 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.158 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.160 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.160 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/adminlte.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.160 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.160 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.160 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.160 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.161 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.161 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.162 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.192 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.749 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/auth/register", parameters={}
+[DEBUG] 2024-10-17 20:59:08.749 [http-nio-8080-exec-10][AbstractHandlerMapping.java] RequestMappingHandlerMapping - Mapped to kr.wikidocs.mvc.auth.controller.AuthController#login(HttpServletRequest, HttpServletResponse, Model, HashMap)
+[DEBUG] 2024-10-17 20:59:08.749 [http-nio-8080-exec-10][AuthController.java] AuthController - call => /auth/register
+[DEBUG] 2024-10-17 20:59:08.750 [http-nio-8080-exec-10][ContentNegotiatingViewResolver.java] ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[WARN ] 2024-10-17 20:59:08.751 [http-nio-8080-exec-10][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][/auth/register] Deprecated unwrapped fragment expression "../common/fragment/head :: headFragment" found in template /auth/register, line 6, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/head :: headFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[WARN ] 2024-10-17 20:59:08.752 [http-nio-8080-exec-10][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][/auth/register] Deprecated unwrapped fragment expression "../common/fragment/script :: scriptFragment" found in template /auth/register, line 63, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/script :: scriptFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[DEBUG] 2024-10-17 20:59:08.753 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.774 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.775 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.775 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.775 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.775 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.775 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.776 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.776 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.776 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.776 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.776 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.777 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.777 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.778 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/css/sb-admin-2.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.778 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.778 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.778 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.780 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/fontawesome-free/css/all.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.780 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery/jquery.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.781 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.780 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:08.781 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.781 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.781 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery-easing/jquery.easing.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.781 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.781 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-ui/jquery-ui.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.782 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.782 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery/jquery.form.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.782 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.782 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.783 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.783 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.783 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.784 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.784 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.784 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.785 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.785 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.785 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.785 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.785 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/jquery.validate.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.786 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.786 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/additional-methods.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.786 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.786 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.786 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.786 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/axios/axios.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.786 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.786 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.787 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/moment.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.787 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.787 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.787 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.787 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.787 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.787 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.787 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/locale/ko.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.789 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.789 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/inputmask/jquery.inputmask.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.789 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.789 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.790 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.790 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.790 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/ag-grid/js/ag-grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.790 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.790 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.791 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.jquery.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.791 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.storage.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.791 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.791 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.common.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.792 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.791 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.792 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.792 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.util.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.793 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.794 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.794 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.794 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.794 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.795 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/sb-admin-2.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.795 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.796 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.797 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.797 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/adminlte.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.797 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.799 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.799 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.800 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:08.799 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.800 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:08.800 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.801 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:08.831 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.834 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/auth/login", parameters={}
+[DEBUG] 2024-10-17 20:59:10.834 [http-nio-8080-exec-8][AbstractHandlerMapping.java] RequestMappingHandlerMapping - Mapped to kr.wikidocs.mvc.auth.controller.AuthController#login(HttpServletRequest, HttpServletResponse, Model, HashMap)
+[DEBUG] 2024-10-17 20:59:10.834 [http-nio-8080-exec-8][AuthController.java] AuthController - call => /auth/login
+[DEBUG] 2024-10-17 20:59:10.835 [http-nio-8080-exec-8][ContentNegotiatingViewResolver.java] ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[WARN ] 2024-10-17 20:59:10.835 [http-nio-8080-exec-8][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-8][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/head :: headFragment" found in template /auth/login, line 6, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/head :: headFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[WARN ] 2024-10-17 20:59:10.836 [http-nio-8080-exec-8][AbstractStandardFragmentInsertionTagProcessor.java] AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-8][/auth/login] Deprecated unwrapped fragment expression "../common/fragment/script :: scriptFragment" found in template /auth/login, line 60, col 11. Please use the complete syntax of fragment expressions instead ("~{../common/fragment/script :: scriptFragment}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+[DEBUG] 2024-10-17 20:59:10.838 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.853 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:10.853 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/css/OverlayScrollbars.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:10.853 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/icheck-bootstrap/icheck-bootstrap.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:10.853 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.css", parameters={}
+[DEBUG] 2024-10-17 20:59:10.853 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.853 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.853 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.853 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.856 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.856 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.856 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.856 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.858 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:10.859 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/css/sb-admin-2.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:10.859 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.859 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.859 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/fontawesome-free/css/all.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:10.859 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.860 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.css", parameters={}
+[DEBUG] 2024-10-17 20:59:10.860 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.860 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.860 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.860 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery/jquery.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.861 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.861 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-ui/jquery-ui.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.861 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.861 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.861 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.861 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.862 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.864 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/jquery-easing/jquery.easing.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.864 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery/jquery.form.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.864 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.864 [http-nio-8080-exec-1][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-confirm/jquery-confirm.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.864 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.864 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.864 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.864 [http-nio-8080-exec-1][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.865 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/jquery.validate.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.865 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.865 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/jquery-validation/additional-methods.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.865 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.865 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.867 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.867 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.867 [http-nio-8080-exec-1][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.867 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.867 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.868 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.868 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.868 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/axios/axios.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.868 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/moment.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.868 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.868 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.868 [http-nio-8080-exec-8][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/moment/locale/ko.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.869 [http-nio-8080-exec-3][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/inputmask/jquery.inputmask.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.869 [http-nio-8080-exec-10][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/daterangepicker/daterangepicker.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.869 [http-nio-8080-exec-8][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.869 [http-nio-8080-exec-3][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.869 [http-nio-8080-exec-10][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.869 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.869 [http-nio-8080-exec-2][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/ag-grid/js/ag-grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.870 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.870 [http-nio-8080-exec-2][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.870 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.870 [http-nio-8080-exec-8][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.870 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.jquery.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.870 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.870 [http-nio-8080-exec-10][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.871 [http-nio-8080-exec-3][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.871 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.storage.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.871 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.common.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.871 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.872 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.872 [http-nio-8080-exec-7][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.util.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.872 [http-nio-8080-exec-5][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/custom/custom.grid.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.872 [http-nio-8080-exec-7][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.872 [http-nio-8080-exec-5][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.872 [http-nio-8080-exec-4][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/sb-admin-2.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.872 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.872 [http-nio-8080-exec-4][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.874 [http-nio-8080-exec-5][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.876 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.876 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.877 [http-nio-8080-exec-6][LogFormatUtils.java] DispatcherServlet - GET "/resources/plugin/toastr/toastr.min.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.877 [http-nio-8080-exec-9][LogFormatUtils.java] DispatcherServlet - GET "/resources/js/adminlte.js", parameters={}
+[DEBUG] 2024-10-17 20:59:10.877 [http-nio-8080-exec-4][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.877 [http-nio-8080-exec-9][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.879 [http-nio-8080-exec-9][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.876 [http-nio-8080-exec-7][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.877 [http-nio-8080-exec-6][AbstractHandlerMapping.java] SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:C:/wikidocs/local/], ServletContext [/]]
+[DEBUG] 2024-10-17 20:59:10.882 [http-nio-8080-exec-6][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:10.902 [http-nio-8080-exec-2][FrameworkServlet.java] DispatcherServlet - Completed 200 OK
+[DEBUG] 2024-10-17 20:59:15.618 [SpringApplicationShutdownHook][ApplicationAvailabilityBean.java] ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+[DEBUG] 2024-10-17 20:59:15.620 [SpringApplicationShutdownHook][AbstractApplicationContext.java] AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@12780549, started on Thu Oct 17 20:51:41 KST 2024
+[DEBUG] 2024-10-17 20:59:15.621 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+[DEBUG] 2024-10-17 20:59:15.622 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'applicationTaskExecutor' completed its stop procedure
+[DEBUG] 2024-10-17 20:59:15.622 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147482623
+[DEBUG] 2024-10-17 20:59:15.623 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'webServerGracefulShutdown' completed its stop procedure
+[DEBUG] 2024-10-17 20:59:15.623 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase 2147481599
+[DEBUG] 2024-10-17 20:59:15.728 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'webServerStartStop' completed its stop procedure
+[DEBUG] 2024-10-17 20:59:15.729 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Stopping beans in phase -2147483647
+[DEBUG] 2024-10-17 20:59:15.729 [SpringApplicationShutdownHook][DefaultLifecycleProcessor.java] DefaultLifecycleProcessor - Bean 'springBootLoggingLifecycle' completed its stop procedure
+[DEBUG] 2024-10-17 20:59:15.729 [SpringApplicationShutdownHook][ExecutorConfigurationSupport.java] ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[DEBUG] 2024-10-17 20:59:15.730 [SpringApplicationShutdownHook][MBeanExporter.java] AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[DEBUG] 2024-10-17 20:59:15.730 [SpringApplicationShutdownHook][ExecutorConfigurationSupport.java] ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

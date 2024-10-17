@@ -42,9 +42,6 @@ public class AuthService {
                 throw new ComException("해당 계정은 잠김상태입니다. \n관리자에게 계정사용 문의 바랍니다.");
             } else {
                 session = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession(true);
-
-                log.debug("session = {}", session);
-
                 session.setMaxInactiveInterval(-1);
                 //session.setMaxInactiveInterval(86400);
                 // 로그인여부
@@ -64,7 +61,7 @@ public class AuthService {
                 // 사용자유형
                 session.setAttribute("userType", userMap.get("userType"));
                 // Token
-                session.setAttribute("token", param.get("token"));
+                // session.setAttribute("token", param.get("token"));
             }
         } catch (Exception e) {
             throw new ComException(e);

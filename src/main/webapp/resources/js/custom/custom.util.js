@@ -394,7 +394,7 @@ custom.util = {
 		}
 
 		$("#nextForm").unwrap();
-		var strHtml = "<form id=\"nextForm\" name=\"nextForm\" method=\"post\" action=\"" + options.url + "\"></form>";
+		var strHtml = "<form id=\"nextForm\" name=\"nextForm\" method=\"get\" action=\"" + options.url + "\"></form>";
 		$("body").append(strHtml); // 화면에 form 등 생성
 		if(typeof options.params != "undefined"){
 			var paramStr = "";

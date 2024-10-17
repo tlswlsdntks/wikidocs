@@ -92,6 +92,8 @@ public class CustomWebMvcConfig implements WebMvcConfigurer {
                         "/errors/**",
                         //"/auth/**",
                         "/auth/login",
+                        "/auth/register",
+                        "/auth/forgot-password",
                         "/auth/logout",
                         //"/frame",
                         //"/main",

@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import kr.wikidocs.common.annotation.NoSession;
 import kr.wikidocs.common.exception.ComException;
 import kr.wikidocs.common.session.UserSession;
+import kr.wikidocs.common.util.PathUtils;
 import kr.wikidocs.config.vo.Path;
 import kr.wikidocs.config.vo.Result;
 import kr.wikidocs.mvc.auth.service.AuthService;
@@ -32,13 +33,17 @@ public class AuthController {
     private final AuthService authService;
 
     @GetMapping({
-            "/login"
+            "/login",
+            "/register",
+            "/forgot-password"
     })
     public String login(HttpServletRequest req, HttpServletResponse res, Model model, @RequestParam HashMap<String, Object> param) throws ComException {
-        log.debug("call => /login");
-        //공통 경로 추가
-        addCommonPath(req, model);
-        return "auth/login";
+        log.debug("call => " + req.getRequestURI());
+        /**
+         * 공통 경로 추가
+         */
+        PathUtils.addCommonPath(req, model);
+        return req.getRequestURI();
     }
 
     @GetMapping({
@@ -48,8 +53,6 @@ public class AuthController {
             "/buttons",
             "/cards",
             "/charts",
-            //"/register",
-            "/forgot-password",
             "/tables",
             "/utilities-animation",
             "/utilities-border",
@@ -103,20 +106,6 @@ public class AuthController {
         } finally {
             res.sendRedirect(req.getContextPath() + "/auth/login");
         }
-    }
-
-    /**
-     * 공통 경로 추가
-     */
-    private void addCommonPath(HttpServletRequest req, Model model) {
-        Path path = new Path(req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort());
-        model.addAttribute("basePath", path.getBasePath());
-        model.addAttribute("cssPath", path.getCssPath());
-        model.addAttribute("imgPath", path.getImgPath());
-        model.addAttribute("jsPath", path.getJsPath());
-        model.addAttribute("pluginPath", path.getPluginPath());
-        model.addAttribute("scssPath", path.getScssPath());
-        model.addAttribute("vendorPath", path.getVendorPath());
     }
 
 }

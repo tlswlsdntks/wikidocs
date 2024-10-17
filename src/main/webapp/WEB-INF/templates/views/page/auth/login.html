@@ -22,24 +22,31 @@
                                 </div>
                                 <form action="#" method="post" id="loginForm">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user"
+                                        <input type="email" class="form-control form-control-user"
                                                id="loginId" name="loginId" aria-describedby="IdHelp"
-                                               placeholder="ID">
+                                               placeholder="example@wikidocs.kr">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                               id="loginPw" name="loginPw" placeholder="PASSWORD">
+                                               id="loginPw" name="loginPw" placeholder="********">
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox small">
                                             <input type="checkbox" class="custom-control-input" id="remember">
-                                            <label class="custom-control-label" for="remember">Remember Me</label>
+                                            <label class="custom-control-label" for="remember">로그인ID 기억하기</label>
                                         </div>
                                     </div>
                                     <a href="#" class="btn btn-primary btn-user btn-block" id="btnLogin">
-                                        Login
+                                        로그인
                                     </a>
                                 </form>
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="/auth/forgot-password">비밀번호를 잊어버리셨나요?</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="/auth/register">회원가입</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -96,28 +103,28 @@
             }
         });
 
-        //로그인
+        // 로그인
         $("#btnLogin").unbind().bind("click", function () {
             let valid = $("#loginForm").valid();
             if (valid) {
                 var p = $("#loginForm").getFormData();
-                // custom.util.ajax({
-                //     url: "/auth/login/process",
-                //     param: p,
-                //     callback: function (result) {
-                //         if (result.rstCd == 0) {
-                //             if ($("#remember").prop("checked")) {
-                //                 custom.storage.local.set("saveId", p.loginId);
-                //             } else {
-                //                 custom.storage.local.remove("saveId");
-                //             }
-                //             custom.util.movePage("/main");
-                //         } else {
-                //             $.alert(result.rstMsg);
-                //             return;
-                //         }
-                //     }
-                // });
+                custom.util.ajax({
+                    url: "/auth/login/process",
+                    param: p,
+                    callback: function (result) {
+                        if (result.rstCd == 0) {
+                            if ($("#remember").prop("checked")) {
+                                custom.storage.local.set("saveId", p.loginId);
+                            } else {
+                                custom.storage.local.remove("saveId");
+                            }
+                            custom.util.movePage("/main");
+                        } else {
+                            $.alert(result.rstMsg);
+                            return;
+                        }
+                    }
+                });
             }
         });
 
@@ -127,6 +134,7 @@
             trigger: "btnLogin"
         })
     }
+
 </script>
 
 </body>
