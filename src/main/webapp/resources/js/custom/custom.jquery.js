@@ -452,7 +452,6 @@
 	 * ----------------------------------------------------------------------------------
 	 */
 	$.toasts = function(options){
-
 		if($.type(options) == 'string'){
 			options = {
 				class: 'bg-info',
@@ -479,24 +478,23 @@
 			options.close = false;
 		}
 
-		$.toast({
-			heading: 'Information',
-			text: 'Loaders are enabled by default. Use `loader`, `loaderBg` to change the default behavior',
-			icon: 'info',
-			loader: true,        // Change it to false to disable loader
-			loaderBg: '#9EC600'  // To change the background
-		});
-
-
-		// $(document).toasts('create', {
-		// 	autoHide: true,
-		// 	delay: 4000,
-		// 	class: options.class,
-		// 	close: options.close,
-		// 	icon: options.icon,
-		// 	title: options.title,
-		// 	body: options.text
+		// $.toast({
+		// 	heading: 'Information',
+		// 	text: 'Loaders are enabled by default. Use `loader`, `loaderBg` to change the default behavior',
+		// 	icon: 'info',
+		// 	loader: true,        // Change it to false to disable loader
+		// 	loaderBg: '#9EC600'  // To change the background
 		// });
+
+		$(document).Toasts('create', {
+			autoHide: true,
+			delay: 2000,
+			class: options.class,
+			close: options.close,
+			icon: options.icon,
+			title: options.title,
+			body: options.text
+		});
 	}
 
 	/* ----------------------------------------------------------------------------------

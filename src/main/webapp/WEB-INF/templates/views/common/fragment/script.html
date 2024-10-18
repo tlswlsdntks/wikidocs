@@ -6,28 +6,29 @@
 <th:block th:fragment="scriptFragment">
 
     <!-- jquery -->
-    <script src="resources/vendor/jquery/jquery.min.js"
-            th:src="@{${vendorPath} + '/jquery/jquery.min.js'}"></script>
+    <script src="resources/plugin/jquery/jquery.min.js"
+            th:src="@{${pluginPath} + '/jquery/jquery.min.js'}"></script>
     <script src="resources/plugin/jquery-ui/jquery-ui.min.js"
             th:src="@{${pluginPath} + '/jquery-ui/jquery-ui.min.js'}"></script>
-    <script src="resources/vendor/jquery-easing/jquery.easing.min.js"
-            th:src="@{${vendorPath} + '/jquery-easing/jquery.easing.min.js'}"></script>
     <script src="resources/plugin/jquery/jquery.form.min.js"
             th:src="@{${pluginPath} + '/jquery/jquery.form.min.js'}"></script>
     <script src="resources/plugin/overlayScrollbars/js/jquery.overlayScrollbars.min.js"
             th:src="@{${pluginPath} + '/overlayScrollbars/js/jquery.overlayScrollbars.min.js'}"></script>
     <script src="resources/plugin/jquery-confirm/jquery-confirm.min.js"
             th:src="@{${pluginPath} + '/jquery-confirm/jquery-confirm.min.js'}"></script>
-    <script src="resources/plugin/jquery-validation/jquery.validate.min.js"
-            th:src="@{${pluginPath} + '/jquery-validation/jquery.validate.min.js'}"></script>
+    <script src="resources/plugin/jquery-validation/jquery.validate.js"
+            th:src="@{${pluginPath} + '/jquery-validation/jquery.validate.js'}"></script>
     <script src="resources/plugin/jquery-validation/additional-methods.min.js"
             th:src="@{${pluginPath} + '/jquery-validation/additional-methods.min.js'}"></script>
+
     <!-- bootstrap.bundle.min -->
     <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"
             th:src="@{${vendorPath} + '/bootstrap/js/bootstrap.bundle.min.js'}"></script>
+
     <!-- Axios -->
     <script src="resources/plugin/axios/axios.min.js"
             th:src="@{${pluginPath} + '/axios/axios.min.js'}"></script>
+
     <!-- InputMask -->
     <script src="resources/plugin/moment/moment.min.js"
             th:src="@{${pluginPath} + '/moment/moment.min.js'}"></script>
@@ -35,12 +36,15 @@
             th:src="@{${pluginPath} + '/moment/locale/ko.js'}"></script>
     <script src="resources/plugin/inputmask/jquery.inputmask.min.js"
             th:src="@{${pluginPath} + '/inputmask/jquery.inputmask.min.js'}"></script>
+
     <!-- date-range-picker -->
     <script src="resources/plugin/daterangepicker/daterangepicker.js"
             th:src="@{${pluginPath} + '/daterangepicker/daterangepicker.js'}"></script>
+
     <!-- AG Grid -->
     <script src="resources/plugin/ag-grid/js/ag-grid.js"
             th:src="@{${pluginPath} + '/ag-grid/js/ag-grid.js'}"></script>
+
     <!-- Common -->
     <script src="resources/js/custom/custom.jquery.js"
             th:src="@{${jsPath} + '/custom/custom.jquery.js'}"></script>
@@ -52,14 +56,14 @@
             th:src="@{${jsPath} + '/custom/custom.util.js'}"></script>
     <script src="resources/js/custom/custom.grid.js"
             th:src="@{${jsPath} + '/custom/custom.grid.js'}"></script>
+
     <!-- Custom scripts for all pages -->
     <script src="resources/js/sb-admin-2.min.js"
             th:src="@{${jsPath} + '/sb-admin-2.min.js'}"></script>
-    <!-- toastr.min.js -->
+
+    <!-- AdminLTE App -->
     <script src="resources/js/adminlte.js"
             th:src="@{${jsPath} + '/adminlte.js'}"></script>
-    <script src="resources/plugin/toastr/toastr.min.js"
-            th:src="@{${pluginPath} + '/toastr/toastr.min.js'}"></script>
 
 </th:block>
 

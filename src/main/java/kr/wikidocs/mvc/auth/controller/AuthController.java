@@ -38,12 +38,27 @@ public class AuthController {
             "/forgot-password"
     })
     public String login(HttpServletRequest req, HttpServletResponse res, Model model, @RequestParam HashMap<String, Object> param) throws ComException {
-        log.debug("call => " + req.getRequestURI());
         /**
          * 공통 경로 추가
          */
         PathUtils.addCommonPath(req, model);
         return req.getRequestURI();
+    }
+
+    /**
+     * 사용자 로그아웃
+     */
+    @GetMapping("/logout")
+    public void logout(HttpServletRequest req, HttpServletResponse res, UserSession session) throws Exception {
+        try {
+            if (session != null) {
+                session.removeSession();
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        } finally {
+            res.sendRedirect(req.getContextPath() + "/auth/login");
+        }
     }
 
     @GetMapping({
@@ -93,19 +108,26 @@ public class AuthController {
     }
 
     /**
-     * 사용자 로그아웃
+     * 회원가입
      */
-    @GetMapping("/logout")
-    public void logout(HttpServletRequest req, HttpServletResponse res, UserSession session) throws Exception {
+    @NoSession
+    @PostMapping("/register/process")
+    public ResponseEntity<Result> register(ModelAndView mv, @RequestParam HashMap<String, Object> param) throws ComException {
+        log.debug("Call ==> /register/process");
+        Result result = new Result();
         try {
-            if (session != null) {
-                session.removeSession();
+            // Session
+            UserSession session = new UserSession();
+            if (!session.isLogin()) {
+                authService.register(param);
+            } else {
+                result.setError(-1, "처리중 오류가 발생하였습니다.");
             }
         } catch (Exception e) {
-            log.error(e.getMessage());
-        } finally {
-            res.sendRedirect(req.getContextPath() + "/auth/login");
+            result.setError(-1, e.getMessage());
         }
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
+
 
 }

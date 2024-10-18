@@ -8,49 +8,58 @@
 <body class="bg-gradient-light">
 
 <div class="container">
-    <div class="card o-hidden border-0 shadow-lg my-5">
-        <div class="card-body p-0">
-            <!-- Nested Row within Card Body -->
-            <div class="row">
-                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                <div class="col-lg-7">
-                    <div class="p-5">
-                        <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">회원가입</h1>
-                        </div>
-                        <form action="#" method="post" id="registerForm">
-                            <div class="form-group row">
-                                <div class="col-sm-6">
-                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                           name="exampleLastName" placeholder="성">
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">회원가입</h1>
                                 </div>
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                           name="exampleFirstName" placeholder="이름">
+                                <form action="#" method="post" id="registerForm">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                                   name="exampleLastName" placeholder="성">
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                                   name="exampleFirstName" placeholder="이름">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" id="exampleInputId"
+                                               name="exampleInputId" placeholder="로그인ID">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                               name="exampleInputEmail" placeholder="이메일">
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="password" class="form-control form-control-user"
+                                                   id="exampleInputPassword" name="exampleInputPassword" placeholder="비밀번호">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="password" class="form-control form-control-user"
+                                                   id="exampleRepeatPassword" name="exampleRepeatPassword" placeholder="비밀번호 재확인">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary btn-user btn-block" id="btnRegister">
+                                        회원가입
+                                    </a>
+                                    <hr>
+                                </form>
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="/auth/login">이미 계정이 있나요? 로그인</a>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                       name="exampleInputEmail" placeholder="이메일">
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="password" class="form-control form-control-user"
-                                           id="exampleInputPassword" name="exampleInputPassword" placeholder="비밀번호">
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="password" class="form-control form-control-user"
-                                           id="exampleRepeatPassword" name="exampleRepeatPassword" placeholder="비밀번호 재확인">
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-primary btn-user btn-block" id="btnRegister">
-                                회원가입
-                            </a>
-                            <hr>
-                        </form>
-                        <hr>
-                        <div class="text-center">
-                            <a class="small" href="/auth/login">이미 계정이 있나요? 로그인</a>
                         </div>
                     </div>
                 </div>
@@ -85,6 +94,9 @@
                 exampleFirstName: {
                     required: true
                 },
+                exampleInputId: {
+                    required: true
+                },
                 exampleInputEmail: {
                     required: true
                 },
@@ -101,6 +113,9 @@
                 },
                 exampleFirstName: {
                     required: "이름을 입력해주세요."
+                },
+                exampleInputId: {
+                    required: "아이디를 입력해주세요."
                 },
                 exampleInputEmail: {
                     required: "이메일을 입력해주세요."
@@ -120,11 +135,18 @@
             if (valid) {
                 var p = $("#registerForm").getFormData();
                 custom.util.ajax({
-                    url: "",
+                    url: "/auth/register/process",
                     param: p,
                     callback: function (result) {
+                        console.log(result);
                         if (result.rstCd == 0) {
-
+                            const element = document.querySelector('.container');
+                            element.classList.add('animate__animated', 'animate__bounceOutLeft'); // 엘리먼트에 애니메이션 클래스 부여
+                            // animate__animated클래스를 부여하면 자동으로 등록되는 커스텀 이벤트
+                            element.addEventListener('animationend', () => {
+                                // 애니메이션 실행이 끝나면 함수 실행
+                                custom.util.movePage("/auth/login");
+                            });
                         } else {
                             $.alert(result.rstMsg);
                             return;
@@ -136,7 +158,7 @@
 
         // Enter
         custom.util.enter({
-            target: ["exampleLastName", "exampleFirstName", "exampleInputEmail", "exampleInputPassword", "exampleRepeatPassword"],
+            target: ["exampleLastName", "exampleFirstName", "exampleInputId", "exampleInputEmail", "exampleInputPassword", "exampleRepeatPassword"],
             trigger: "btnRegister"
         })
     }

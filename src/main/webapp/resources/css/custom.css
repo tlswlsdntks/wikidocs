@@ -1,0 +1,373 @@
+/*!
+ *   Custom CSS
+ *   Author: dev
+ */
+body {
+	font-size: 13px;
+}
+
+.card-header {
+	padding: .5rem 1rem;
+}
+
+.card-body {
+	padding: .5rem;
+}
+
+.card-header .card-tools {
+	margin: unset;
+	margin-right: -0.5rem;
+}
+
+.card.card-outline-tabs .card-tools {
+	margin: unset;
+	margin-right: -0.5rem;
+}
+
+.card-footer {
+	padding: .5rem 1.25rem;
+}
+
+.input-group {
+	width: unset;
+}
+
+.form-control {
+	width: 10rem;
+}
+
+.form-inline>.input-group>input.form-control {
+	width: 10rem;
+}
+
+/**
+ * ADD: Font Awesome
+ * - fa 는 4.x , 5x 에서 Free
+ * - fab 는 5.x 에서 Free
+ * - fas 는 5.x 에서 Free
+ * - far , fal 은  5.x 에서 Pro only
+ */
+.fa-right-from-bracket {
+	content: "\f2f5";
+}
+
+.fa-asterisk {
+	font-size: 7px;
+	color: #dc3545 !important;
+}
+
+/* ADD: Button */
+.brand-link .brand-image {
+	margin-left: 0.5rem;
+}
+
+.brand-link .brand-view {
+	opacity: .8;
+	margin-left: 0.5rem;
+}
+
+.btn.btn-image {
+	position: relative;
+	padding-left: 40px;
+}
+
+.btn.btn-image>img {
+	position: absolute;
+	top: 5px;
+	left: 3px;
+	display: block;
+	width: 26px;
+	height: 26px;
+	border-radius: 3px;
+}
+
+.dropdown-menu>a i.pull-right {
+	right: 0;
+	margin-top: 3px;
+	margin-left: 10px;
+}
+
+.main-header .navbar-nav .nav-item.nav-item-div {
+	line-height: 2.5;
+}
+
+.nav-sidebar .nav-link {
+	padding: .5rem .5rem;
+}
+
+.nav-sidebar .nav-item .nav-item {
+	padding-left: .6rem;
+}
+
+.nav-sidebar>.nav-item>.nav-link {
+	padding-left: .2rem;
+}
+
+.nav-sidebar .nav-item .nav-item .nav-item {
+	padding-left: .7rem;
+}
+
+.nav-sidebar .nav-link>.right, .nav-sidebar .nav-link>p>.right {
+	right: .5rem;
+}
+
+.sidebar-mini .main-sidebar .nav-link, .sidebar-mini-md .main-sidebar .nav-link, .sidebar-mini-xs .main-sidebar .nav-link {
+	width: unset;
+}
+
+.main-header .breadcrumb {
+	margin: unset;
+	padding: unset;
+	background-color: unset;
+	line-height: 2rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+	content: ">";
+	font-weight: 600;
+}
+
+.content-header {
+	padding: 1rem .5rem .5rem;
+}
+
+.content-header .content-title {
+	font-size: 1rem;
+}
+
+/* toast */
+.toast-body {
+	min-width: 300px;
+	font-size: 0.8rem;
+}
+
+.toasts-top-right {
+	z-index: 9999;
+}
+
+/* jconfirm */
+.jconfirm .jconfirm-cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.jconfirm .jconfirm-content {
+	white-space: pre-line;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-title {
+	font-size: 1.1rem;
+}
+
+/* Loading */
+.loading {
+	z-index: auto;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .5);
+	width: 100%;
+}
+
+.loading-wheel {
+	width: 20px;
+	height: 20px;
+	margin-top: -40px;
+	margin-left: 0px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-width: 30px;
+	border-radius: 50%;
+	-webkit-animation: spin 1s linear infinite;
+}
+
+.style-1 .loading-wheel {
+	border-style: double;
+	border-color: #ccc transparent;
+}
+
+/* search table */
+.table-search {
+	margin: 0;
+	border: 1px solid #dee2e6;
+}
+
+.table-search td, .table-search th {
+	vertical-align: middle;
+	border: 1px solid #dee2e6;
+}
+
+.table-search th {
+	width: 120px;
+	height: 42px;
+	vertical-align: middle;
+	background-color: #f8f8f8 !important;
+}
+
+/* view table */
+.table-view {
+	margin: 0;
+	border: 1px solid #dee2e6;
+}
+
+.table-view td, .table-view th {
+	vertical-align: middle;
+	border: 1px solid #dee2e6;
+}
+
+.table-view th {
+	width: 150px;
+	height: 42px;
+	padding: 0.3rem 0.5rem;
+	vertical-align: middle;
+	background-color: #f8f8f8 !important;
+}
+
+/* datetimepicker table */
+.bootstrap-datetimepicker-widget .table {
+	border: 1px solid #dee2e6;
+}
+
+.bootstrap-datetimepicker-widget .table td, .bootstrap-datetimepicker-widget .table th {
+	border: 1px solid #dee2e6;
+}
+
+.bootstrap-datetimepicker-widget .table-condensed {
+	border: unset;
+}
+
+.bootstrap-datetimepicker-widget .table-condensed td, .bootstrap-datetimepicker-widget .table-condensed th {
+	border: unset;
+}
+
+/* modal draggable */
+.draggable-handler {
+	cursor: move;
+}
+
+/* custom radio */
+.custom-control-label {
+	line-height: 1.5rem;
+	margin-right: 0.5rem;
+	cursor: pointer;
+}
+
+/* custom ag-grid */
+.ag-cell .input-group {
+	display: inline-block;
+}
+
+.ag-cell .input-group>.custom-control {
+	line-height: normal;
+}
+
+.ag-theme-alpine .ag-header-cell {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.ag-header-cell-text {
+	/* flex: 1; */
+
+}
+
+.ag-right-header .ag-header-cell-text {
+	padding-right: 10px;
+}
+
+.ag-right-header .ag-header-cell-label {
+	flex-direction: row-reverse;
+}
+
+.ag-center-header .ag-header-cell-label {
+	justify-content: center;
+}
+
+.ag-left-header .ag-header-cell-label {
+	flex-direction: row;
+}
+
+.ag-center-cell {
+	text-align: center;
+}
+
+.ag-right-cell {
+	text-align: right;
+}
+
+.ag-left-cell {
+	text-align: left;
+}
+
+/* main-box */
+.main-box {
+	margin-bottom: 15px;
+	border-radius: 0.25rem;
+	box-shadow: 0 0 1px rgb(0 0 0/ 13%), 0 1px 3px rgb(0 0 0/ 20%);
+}
+
+.main-box>.main-box-header {
+	padding: 10px;
+	background-color: rgba(0, 0, 0, .2);
+	font-size: 14px;
+}
+
+.main-box>.main-box-header font {
+	font-weight: bold;
+}
+
+.main-box>.main-box-header a {
+	float: right;
+}
+
+.main-box .icon {
+	color: rgba(0, 0, 0, .15);
+	z-index: 0;
+}
+
+.main-box .icon>i {
+	left: 15px;
+	position: unset;
+}
+
+.main-box .icon>i.ion {
+	top: 5px;
+	font-size: 70px;
+}
+
+.main-box>.main-box-inner {
+	padding: 10px;
+	height: 205px;
+	/* background-color: #fff; */
+}
+
+.main-box .main-box-left {
+	text-align: center;
+	padding: 40px 0;
+}
+
+.main-box h3 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin: 0 0 10px;
+	padding: 0;
+	white-space: nowrap;
+}
+
+/* .main-box .main-box-right {
+	position: absolute;
+	top: 50px;
+	right: 20px;
+	width: 60%;
+} */
+.main-box-right .list-group-item {
+	border: 0;
+	background-color: transparent;
+	padding: .5rem .5rem;
+	font-size: 14px;
+}

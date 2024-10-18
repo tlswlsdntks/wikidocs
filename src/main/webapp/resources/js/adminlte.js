@@ -2591,7 +2591,7 @@
   var Default$2 = {
     position: POSITION_TOP_RIGHT,
     fixed: true,
-    autohide: false,
+    autohide: true,
     autoremove: true,
     delay: 1000,
     fade: true,
@@ -2743,7 +2743,6 @@
         }
       });
     };
-
     return Toasts;
   }();
   /**

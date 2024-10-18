@@ -19,8 +19,7 @@ public class PathUtils {
             modelAndView.addObject("pluginPath", path.getPluginPath());
             modelAndView.addObject("scssPath", path.getScssPath());
             modelAndView.addObject("vendorPath", path.getVendorPath());
-        }
-        if (obj instanceof Model model) {
+        } else if (obj instanceof Model model) {
             model.addAttribute("basePath", path.getBasePath());
             model.addAttribute("cssPath", path.getCssPath());
             model.addAttribute("imgPath", path.getImgPath());
