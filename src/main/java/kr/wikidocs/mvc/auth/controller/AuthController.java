@@ -67,6 +67,7 @@ public class AuthController {
             "/blank",
             "/buttons",
             "/cards",
+            "/illustrations",
             "/charts",
             "/tables",
             "/utilities-animation",
