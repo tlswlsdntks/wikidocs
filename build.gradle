@@ -62,7 +62,15 @@ dependencies {
 	implementation group: 'javainetlocator', name: 'inetaddresslocator', version: '2.18'
 	// https://mvnrepository.com/artifact/com.google.code.gson/gson
 	implementation group: 'com.google.code.gson', name: 'gson', version: '2.11.0'
-
+	// https://mvnrepository.com/artifact/org.mybatis/mybatis
+	implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.16'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '3.3.5'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.2'
+	// https://mvnrepository.com/artifact/org.springframework.session/spring-session-core
+	implementation group: 'org.springframework.session', name: 'spring-session-core', version: '3.3.2'
 }
 
 tasks.named('test') {

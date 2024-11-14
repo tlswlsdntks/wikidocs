@@ -1,40 +1,77 @@
 spring:
-  messages:
-    basename: message/messages
-    encoding: UTF-8
-    fallbackToSystemLocale: false
-    alwaysUseMessageFormat: true
   profiles:
     active: local
   thymeleaf:
     prefix: /WEB-INF/templates/views/page/
     suffix: .html
+  messages:
+    basename: message/messages
+    encoding: UTF-8
+    fallbackToSystemLocale: false
+    alwaysUseMessageFormat: true
   servlet:
     multipart:
       enabled: true
       max-file-size: 100MB
       max-request-size: 100MB
+  datasource:
+    url: jdbc:log4jdbc:mysql://localhost:3306/sample?charSet=UTF-8&prepareThreshold=1
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath*:**/mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
 logging:
   config: classpath:log4j2.yml
 server:
-  title: https://tlswlsdntks.tistory.com/
+  title: https://github.com/tlswlsdntks
   tomcat:
     max-http-form-post-size: 20MB
+  error:
+    path: /errors
+    include-exception: true
+    include-stacktrace: always
+    whitelabel:
+      enabled: true
 
 --- #local
 spring:
   config:
     activate:
       on-profile: local
+  datasource:
+    hikari:
+      jdbc-url: jdbc:log4jdbc:mysql://127.0.0.1:3306/sample?charSet=UTF-8&prepareThreshold=1
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-lifetime: 240000
+      maximum-pool-size: 10
+      minimum-idle: 1
+      idle-timeout: 180000
+      connection-timeout: 10000
+      connection-test-query: SELECT 1
+      leak-detection-threshold: 60000
   web:
     resources:
-      static-locations: file:C:/wikidocs/local
+      static-locations: file:C:/wikidocs/data
   session:
     timeout: 3600
     store-type: none
   devtools:
     livereload:
       enabled: true
+logging:
+  level:
+    root: info
+    '[kr.wikidocs.admin]': debug
+    '[kr.wikidocs.api]': debug
+    '[kr.wikidocs.batch]': debug
+    '[jdbc.resultsettable]': warn
+    '[jdbc.sqltiming]': info
 server:
   version: '@local version@'
   port: 8080

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+        <setting name="defaultStatementTimeout" value="25"/>
+        <setting name="callSettersOnNulls" value="true"/>
+    </settings>
+
+    <!-- alias 정의 -->
+	<typeAliases>
+		<typeAlias alias="linkMap" type="java.util.LinkedHashMap"/>
+		<typeAlias alias="paramMap" type="java.util.HashMap"/>
+		<typeAlias alias="paramList" type="java.util.List"/>
+		<typeAlias alias="resultMap" type="kr.wikidocs.common.map.CamelMap"/>
+	</typeAliases>
+</configuration>
