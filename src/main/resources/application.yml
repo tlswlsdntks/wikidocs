@@ -15,7 +15,7 @@ spring:
       max-file-size: 100MB
       max-request-size: 100MB
   datasource:
-    url: jdbc:log4jdbc:mysql://localhost:3306/sample?charSet=UTF-8&prepareThreshold=1
+    url: jdbc:log4jdbc:mysql://localhost:3306/classicmodels?charSet=UTF-8&prepareThreshold=1
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -44,7 +44,7 @@ spring:
       on-profile: local
   datasource:
     hikari:
-      jdbc-url: jdbc:log4jdbc:mysql://127.0.0.1:3306/sample?charSet=UTF-8&prepareThreshold=1
+      jdbc-url: jdbc:log4jdbc:mysql://127.0.0.1:3306/classicmodels?charSet=UTF-8&prepareThreshold=1
       username: root
       password: root
       driver-class-name: com.mysql.cj.jdbc.Driver
