@@ -1,1 +1,1 @@
-# wikidocs
+# wikidocs toy project
