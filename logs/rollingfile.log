@@ -1,17 +1,18 @@
-[INFO ] 2024-11-14 18:00:33.918 [restartedMain][StartupInfoLogger.java] WikidocsApplication - Starting WikidocsApplication using Java 17.0.11 with PID 22880 (C:\Users\tlswl\git\wikidocs\out\production\classes started by tlswl in C:\Users\tlswl\git\wikidocs)
-[DEBUG] 2024-11-14 18:00:33.942 [restartedMain][StartupInfoLogger.java] WikidocsApplication - Running with Spring Boot v3.3.2, Spring v6.1.11
-[INFO ] 2024-11-14 18:00:33.944 [restartedMain][SpringApplication.java] WikidocsApplication - The following 1 profile is active: "local"
-[INFO ] 2024-11-14 18:00:34.119 [restartedMain][DeferredLog.java] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[INFO ] 2024-11-14 18:00:34.120 [restartedMain][DeferredLog.java] DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[WARN ] 2024-11-14 18:00:34.792 [restartedMain][PostProcessorRegistrationDelegate.java] PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
-[INFO ] 2024-11-14 18:00:34.817 [restartedMain][AbstractAddressingEndpointMapping.java] AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-[INFO ] 2024-11-14 18:00:35.022 [restartedMain][TomcatWebServer.java] TomcatWebServer - Tomcat initialized with port 8080 (http)
-[INFO ] 2024-11-14 18:00:35.033 [restartedMain][DirectJDKLog.java] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 2024-11-14 18:00:35.034 [restartedMain][DirectJDKLog.java] StandardService - Starting service [Tomcat]
-[INFO ] 2024-11-14 18:00:35.035 [restartedMain][DirectJDKLog.java] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
-[INFO ] 2024-11-14 18:00:35.078 [restartedMain][DirectJDKLog.java] [/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 2024-11-14 18:00:35.078 [restartedMain][ServletWebServerApplicationContext.java] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 957 ms
-[INFO ] 2024-11-14 18:00:35.572 [restartedMain][OptionalLiveReloadServer.java] OptionalLiveReloadServer - LiveReload server is running on port 35729
-[INFO ] 2024-11-14 18:00:35.586 [restartedMain][DirectJDKLog.java] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 2024-11-14 18:00:35.601 [restartedMain][TomcatWebServer.java] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-[INFO ] 2024-11-14 18:00:35.609 [restartedMain][StartupInfoLogger.java] WikidocsApplication - Started WikidocsApplication in 1.971 seconds (process running for 2.87)
+[INFO ] 2025-02-24 19:11:50.322 [File Watcher][LocalDevToolsAutoConfiguration.java] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2025-02-24 19:11:50.330 [Thread-5][DirectJDKLog.java] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-02-24 19:11:50.505 [restartedMain][StartupInfoLogger.java] WikidocsApplication - Starting WikidocsApplication using Java 17.0.0.1 with PID 22452 (C:\Users\tlswl\Projects\wikidocs\out\production\classes started by tlswl in C:\Users\tlswl\Projects\wikidocs)
+[DEBUG] 2025-02-24 19:11:50.506 [restartedMain][StartupInfoLogger.java] WikidocsApplication - Running with Spring Boot v3.3.2, Spring v6.1.11
+[INFO ] 2025-02-24 19:11:50.506 [restartedMain][SpringApplication.java] WikidocsApplication - The following 1 profile is active: "local"
+[WARN ] 2025-02-24 19:11:50.651 [restartedMain][PostProcessorRegistrationDelegate.java] PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+[INFO ] 2025-02-24 19:11:50.652 [restartedMain][AbstractAddressingEndpointMapping.java] AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[INFO ] 2025-02-24 19:11:50.675 [restartedMain][TomcatWebServer.java] TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 2025-02-24 19:11:50.676 [restartedMain][DirectJDKLog.java] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-02-24 19:11:50.676 [restartedMain][DirectJDKLog.java] StandardService - Starting service [Tomcat]
+[INFO ] 2025-02-24 19:11:50.676 [restartedMain][DirectJDKLog.java] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+[INFO ] 2025-02-24 19:11:50.687 [restartedMain][DirectJDKLog.java] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2025-02-24 19:11:50.687 [restartedMain][ServletWebServerApplicationContext.java] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 180 ms
+[INFO ] 2025-02-24 19:11:50.766 [restartedMain][OptionalLiveReloadServer.java] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2025-02-24 19:11:50.770 [restartedMain][DirectJDKLog.java] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2025-02-24 19:11:50.772 [restartedMain][TomcatWebServer.java] TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[INFO ] 2025-02-24 19:11:50.775 [restartedMain][StartupInfoLogger.java] WikidocsApplication - Started WikidocsApplication in 0.294 seconds (process running for 199.227)
+[INFO ] 2025-02-24 19:11:50.776 [restartedMain][ConditionEvaluationDeltaLoggingListener.java] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
